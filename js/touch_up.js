@@ -25,32 +25,17 @@ $(document)
 
 
     function draw(pos) {
-      //  ctx.save();
-      // ctx.setTransform(1, 0, 0, 1, 0, 0);
-      // ctx.clearRect(0, 0, canvas.width, canvas.height);
-      // ctx.restore();
+
         var imgBeforePos = pos * imgBefore.width / ctx.canvas.width;
         var imgAfterPos = pos * imgAfter.width / ctx.canvas.width;
 
-        //left
-        // ctx.drawImage(imgBefore, 0, 0, imgBeforePos, imgBefore.height, 0, 0, pos, ctx.canvas.height);
-
-
-        // console.log("pos =" + pos);
-        console.log("pos = " +pos);
-        console.log("imgAfterPos =" + imgAfterPos);
-
-        //right
-        // ctx.drawImage(imgAfter, imgAfterPos, 0, imgAfter.width, imgAfter.height, pos, 0, ctx.canvas.width, ctx.canvas.height);
-        // ctx.drawImage(imgAfter,       0,        0,   866,              1020,        200,   0,  866, 1020);
         ctx.save();
         ctx.setTransform(1, 0, 0, 1, 0, 0);
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.restore();
-        ctx.drawImage(imgBefore, 0, 0, imgBeforePos, imgBefore.height, 0, 0, pos, ctx.canvas.height);
-        // ctx.drawImage(imgAfter, pos, 0, 500, 500, pos, 0,  866, 1020);
-        ctx.drawImage(imgAfter, pos, 0, imgAfter.width-pos, imgAfter.height,  pos, 0, canvas.width-pos, canvas.height);
 
+        ctx.drawImage(imgBefore, 0, 0, imgBeforePos, imgBefore.height, 0, 0, pos, ctx.canvas.height);
+        ctx.drawImage(imgAfter, pos, 0, imgAfter.width-pos, imgAfter.height,  pos, 0, canvas.width-pos, canvas.height);
 
         ctx.fillStyle = 'rgb(55, 55, 55)';
         ctx.beginPath();

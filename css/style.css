@@ -573,7 +573,7 @@ h1 {
     /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, transparent 0%, rgba(26, 26, 27, 0.95) 85%, rgba(30, 30, 32, 0.95) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f21e1e20',GradientType=0 ); }
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f21e1e20',GradientType=0 )"; }
   .project .legende {
     pointer-events: none;
     z-index: 200;
@@ -702,7 +702,7 @@ section {
     /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, transparent 0%, rgba(26, 26, 27, 0.95) 85%, rgba(30, 30, 32, 0.95) 100%);
     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f21e1e20',GradientType=0 ); }
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f21e1e20',GradientType=0 )"; }
     @media only screen and (max-width: 767px) {
       section.contact-section {
         padding-top: 15%; } }
