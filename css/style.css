@@ -979,27 +979,29 @@ section {
     pointer-events: none; }
     .modals.dimmer .ui.long.fullscreen.modal.scrolling {
       margin: 2rem auto !important; }
-    .modals.dimmer .ui.long.fullscreen.modal .close {
-      pointer-events: auto;
-      position: fixed;
-      top: 0;
-      right: 0;
-      width: 40px;
-      height: 40px;
-      opacity: 0.8;
-      padding: 0;
-      transition: opacity 0.1s ease; }
-      @media only screen and (max-width: 767px) {
-        .modals.dimmer .ui.long.fullscreen.modal .close {
-          display: none; } }
-      .modals.dimmer .ui.long.fullscreen.modal .close img {
-        width: 34px;
-        height: 34px; }
-      .modals.dimmer .ui.long.fullscreen.modal .close:hover {
-        opacity: 1; }
     .modals.dimmer .ui.long.fullscreen.modal .image.content {
+      position: relative;
       padding: 4.5rem;
       flex-direction: column; }
+      .modals.dimmer .ui.long.fullscreen.modal .image.content .close {
+        pointer-events: auto;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        opacity: 0.8;
+        padding: 0;
+        transition: opacity 0.1s ease; }
+        @media only screen and (max-width: 767px) {
+          .modals.dimmer .ui.long.fullscreen.modal .image.content .close {
+            display: none; } }
+        .modals.dimmer .ui.long.fullscreen.modal .image.content .close img {
+          width: 34px;
+          height: 34px; }
+        .modals.dimmer .ui.long.fullscreen.modal .image.content .close:hover {
+          opacity: 1; }
       .modals.dimmer .ui.long.fullscreen.modal .image.content .image {
         display: block;
         width: 100%;

@@ -988,7 +988,7 @@ section{
     background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(26,26,27,0.95) 85%, rgba(30,30,32,0.95) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(26,26,27,0.95) 85%,rgba(30,30,32,0.95) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(26,26,27,0.95) 85%,rgba(30,30,32,0.95) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f21e1e20',GradientType=0 ); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f21e1e20',GradientType=0 );
 
     @include responsive(mobile){
       padding-top:15%
@@ -1377,30 +1377,33 @@ section{
     margin: 2rem auto!important;
     }
 
-    .close{
-      @include responsive (mobile){
-        display:none;
-      }
-      pointer-events: auto;
-      position: fixed;
-      top:0;
-      right: 0;
-      width: 40px;
-      height: 40px;
-      opacity:0.8;
-      padding: 0;
-      transition:opacity 0.1s ease;
-        img{
-          width: 34px;
-          height: 34px;
-        }
 
-        &:hover{
-          opacity:1;
-        }
-    }
 
     .image.content{
+      position: relative;
+      .close{
+        @include responsive (mobile){
+          display:none;
+        }
+        pointer-events: auto;
+        cursor:pointer;
+        position: absolute;
+        top:0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        opacity:0.8;
+        padding: 0;
+        transition:opacity 0.1s ease;
+          img{
+            width: 34px;
+            height: 34px;
+          }
+
+          &:hover{
+            opacity:1;
+          }
+      }
       padding: 4.5rem;
       flex-direction: column;
 

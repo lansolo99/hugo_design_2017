@@ -630,8 +630,9 @@ $(document)
         )
       .modal('attach events', '.half-area-left', 'show')
       .modal('attach events', '.half-area-right', 'show')
+      .modal('attach events', '.close', 'hide')
       ;
-
+// $( ".ui.modal" ).on( "click", zoomDezoomMobile );
 
     //Hide desktop & touch-up modal on mobile breakpoint
     enquire.register("screen and (max-width: 767px)", {
