@@ -1381,6 +1381,7 @@ section{
 
     .image.content{
       position: relative;
+
       .close{
         @include responsive (mobile){
           display:none;

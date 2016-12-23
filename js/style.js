@@ -1,12 +1,16 @@
 $(document)
   .ready(function() {
-
-
+  //   var sectionHeight = $(".project").height();
+  // console.log('sectionHeight = '+ sectionHeight);
+    // $('.project .dark-dimmer').load(function () {
+    //   var sectionHeight = $(".project").height();
+    //   console.log('sectionHeight = '+ sectionHeight);
+    // });
     /*********************
         Height calcs
     **********************/
 
-    checkSizeBrowser();
+
 
     $(window).resize(checkSizeBrowser);
 
@@ -16,6 +20,13 @@ $(document)
       var docHeightDeskop =parseInt(docHeight-60);
       var docWidth = jQuery(window).width();
       var sectionHeight = $(".project").height();
+
+      $(window).on('load', function(){
+        var sectionHeight = $(".project").height();
+        $(".project .dark-dimmer").css("height",sectionHeight);
+
+      });
+
       var mobileGalleryHeight = parseInt((docWidth*2));
       var mobilefixedNavHeight = $("#fixedNav").height();
 
@@ -23,9 +34,10 @@ $(document)
       $(".project .dark-dimmer").css("height",sectionHeight);
       $(".photo-gallery.desktop.wrapper").css("height",docHeightDeskop);
       $(".photo-gallery.mobile.wrapper").css("height",mobileGalleryHeight-mobilefixedNavHeight);
-      // $(".photo-gallery.mobile.wrapper").css("min-height","1000px");
+    
     }
 
+    checkSizeBrowser();
     $.Velocity.defaults.easing = "easeOutsine";
 
 
@@ -606,6 +618,7 @@ $(document)
       )
     .modal('attach events', '.desktop-area', 'show')
     .modal('attach events', '.project.miscellaneous .full-area', 'show')
+    .modal('attach events', '#closeDesktop', 'hide')
     ;
 
 
@@ -619,6 +632,7 @@ $(document)
     .modal('attach events', '.mobile-area', 'show')
     .modal('attach events', '.project.mobile .full-area', 'show')
     .modal('attach events', '.mobile-only-area', 'show')
+    .modal('attach events', '#closeMobile', 'hide')
     ;
 
     //Touch-up screens modal
@@ -630,9 +644,9 @@ $(document)
         )
       .modal('attach events', '.half-area-left', 'show')
       .modal('attach events', '.half-area-right', 'show')
-      .modal('attach events', '.close', 'hide')
+      .modal('attach events', '#closeTouchUp', 'hide')
       ;
-// $( ".ui.modal" ).on( "click", zoomDezoomMobile );
+
 
     //Hide desktop & touch-up modal on mobile breakpoint
     enquire.register("screen and (max-width: 767px)", {
