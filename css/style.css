@@ -625,10 +625,10 @@ h1 {
     top: 0;
     bottom: 0;
     position: absolute; }
-  .project a.desktop-area, .project a.mobile-area, .project a.full-area {
+  .project a.desktop-area, .project a.mobile-area, .project a.full-area, .project a.half-area-left, .project a.half-area-right {
     cursor: pointer; }
     @media only screen and (max-width: 767px) {
-      .project a.desktop-area, .project a.mobile-area, .project a.full-area {
+      .project a.desktop-area, .project a.mobile-area, .project a.full-area, .project a.half-area-left, .project a.half-area-right {
         display: none; } }
   @media only screen and (min-width: 768px) {
     .project a.mobile-only-area {

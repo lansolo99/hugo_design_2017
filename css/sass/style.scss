@@ -858,7 +858,7 @@ p{
   }
 
 
-  a.desktop-area, a.mobile-area, a.full-area{
+  a.desktop-area, a.mobile-area, a.full-area, a.half-area-left, a.half-area-right {
     cursor:pointer;
     @include responsive (mobile){
       display:none;
