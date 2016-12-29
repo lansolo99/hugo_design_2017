@@ -507,6 +507,7 @@ p{
   .photo-gallery.desktop.wrapper{
     overflow: hidden;
     position: relative;
+    display: -ms-flexbox;
     display:flex;
     flex-wrap: wrap;
     align-content:flex-start;
