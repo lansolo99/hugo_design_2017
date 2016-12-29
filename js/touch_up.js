@@ -25,7 +25,7 @@ $(document)
 
 
     function draw(pos) {
-
+        console.log('ie draw fct exec');
         var imgBeforePos = pos * imgBefore.width / ctx.canvas.width;
         var imgAfterPos = pos * imgAfter.width / ctx.canvas.width;
 
@@ -86,7 +86,7 @@ $(document)
             });
 
 
-            
+
             //Slider Position Switch
             var touchUpSliderPos = 'left';
 
