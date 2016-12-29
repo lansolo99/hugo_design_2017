@@ -1033,6 +1033,7 @@ section {
         width: 90%; } }
   .modals.dimmer .ui.long.fullscreen.modal.touch-up .image.content .module {
     max-width: 866px;
+    width: 100%;
     margin: auto; }
 
 /*# sourceMappingURL=style.css.map */
