@@ -1432,7 +1432,7 @@ section{
             display: block;
             max-width: 100%;
             height: auto;
-            cursor: ew-resize;;
+            cursor: ew-resize;
             -webkit-tap-highlight-color: transparent;
           }
 
@@ -1440,6 +1440,8 @@ section{
       }
 
     }
+
+
 
   }
 
@@ -1459,6 +1461,12 @@ section{
 
   //Touch up A/B image compare
   .ui.long.fullscreen.modal.touch-up{
+
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      pointer-events:auto;
+    }
+
     .image.content{
       .module{
         max-width:866px;

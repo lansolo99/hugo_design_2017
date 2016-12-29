@@ -1031,6 +1031,9 @@ section {
     @media only screen and (max-width: 767px) {
       .modals.dimmer .ui.long.fullscreen.modal.mobile .image.content img.image {
         width: 90%; } }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .modals.dimmer .ui.long.fullscreen.modal.touch-up {
+      pointer-events: auto; } }
   .modals.dimmer .ui.long.fullscreen.modal.touch-up .image.content .module {
     max-width: 866px;
     width: 100%;
