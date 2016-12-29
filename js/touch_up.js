@@ -22,12 +22,32 @@ $(document)
     var imgGrab = new Image();
     imgGrab.src = "images/touch_up_grab.svg";
 
+    //IE detection (get rid of imgGrab)
 
+    function GetIEVersion() {
+      var sAgent = window.navigator.userAgent;
+      var Idx = sAgent.indexOf("MSIE");
+
+      // If IE, return version number.
+      if (Idx > 0)
+        return parseInt(sAgent.substring(Idx+ 5, sAgent.indexOf(".", Idx)));
+
+      // If IE 11 then look for Updated user agent string.
+      else if (!!navigator.userAgent.match(/Trident\/7\./))
+        return 11;
+
+      else
+        return 0; //It is not IE
+      }
+
+if (GetIEVersion() > 0)
+   console.log('IE');
+else
+   console.log(' not IE');
 
 
     function draw(pos) {
-        var isIE11 = navigator.userAgent.match(/Trident\/7.0; rv 11.0/);
-        console.log(isIE11);
+
         var imgBeforePos = pos * imgBefore.width / ctx.canvas.width;
         var imgAfterPos = pos * imgAfter.width / ctx.canvas.width;
 
