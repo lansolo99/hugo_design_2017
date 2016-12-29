@@ -85,6 +85,8 @@ $(document)
                 canvas.removeEventListener('mousemove', move);
             });
 
+
+            
             //Slider Position Switch
             var touchUpSliderPos = 'left';
 
