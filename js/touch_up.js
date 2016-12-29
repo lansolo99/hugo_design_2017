@@ -21,7 +21,7 @@ $(document)
 
     var imgGrab = new Image();
     imgGrab.src = "images/touch_up_grab.svg";
-
+    var IETrue ;
     //IE detection (get rid of imgGrab)
 
     function GetIEVersion() {
@@ -36,14 +36,15 @@ $(document)
       else if (!!navigator.userAgent.match(/Trident\/7\./))
         return 11;
 
+
       else
         return 0; //It is not IE
       }
 
 if (GetIEVersion() > 0)
-   console.log('IE');
+   IETrue = "IE";
 else
-   console.log(' not IE');
+   IETrue = "not IE";
 
 
     function draw(pos) {
@@ -63,7 +64,15 @@ else
         ctx.beginPath();
         ctx.rect(pos, 0, 10, ctx.canvas.height);
         ctx.fill();
-        ctx.drawImage(imgGrab, pos-(imgGrab.width/2)+5, ctx.canvas.height/2);
+
+        if (IETrue=='IE'){
+          //don't load imgGrab
+          console.log(IETrue);
+        }else{
+          console.log(IETrue);
+            ctx.drawImage(imgGrab, pos-(imgGrab.width/2)+5, ctx.canvas.height/2);
+        }
+
 
     }
 
