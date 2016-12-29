@@ -290,7 +290,11 @@ h1 {
     overflow: hidden;
     position: relative;
     display: -ms-flexbox;
+    -ms-flex: 0 1 auto;
     display: flex;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: auto;
     flex-wrap: wrap;
     align-content: flex-start;
     width: 100%;
