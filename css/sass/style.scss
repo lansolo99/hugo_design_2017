@@ -1468,6 +1468,7 @@ section{
     }
 
     .image.content{
+      -ms-flex-direction:column;
       .module{
         max-width:866px;
         width: 100%;
