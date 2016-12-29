@@ -1380,6 +1380,7 @@ section{
 
 
     .image.content{
+      -ms-flex-direction:column;
       position: relative;
 
       .close{
@@ -1468,7 +1469,7 @@ section{
     }
 
     .image.content{
-      -ms-flex-direction:column;
+
       .module{
         max-width:866px;
         width: 100%;
