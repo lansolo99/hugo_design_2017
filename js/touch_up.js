@@ -22,10 +22,12 @@ $(document)
     var imgGrab = new Image();
     imgGrab.src = "images/touch_up_grab.svg";
 
+    var isIE11 = navigator.userAgent.match(/Trident\/7.0; rv 11.0/);
 
 
     function draw(pos) {
-        console.log('ie draw fct exec');
+
+        console.log(isIE11);
         var imgBeforePos = pos * imgBefore.width / ctx.canvas.width;
         var imgAfterPos = pos * imgAfter.width / ctx.canvas.width;
 
