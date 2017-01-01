@@ -286,6 +286,7 @@ p{
   #mobileAlert{
     display:none;
     @include responsive(mobile){
+      display: -webkit-flex;
       display:flex;
       line-height: 1.5em;
       text-align: left;

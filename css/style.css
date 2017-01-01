@@ -141,6 +141,7 @@ h1 {
     display: none; }
     @media only screen and (max-width: 767px) {
       #fixedNav #mobileAlert {
+        display: -webkit-flex;
         display: flex;
         line-height: 1.5em;
         text-align: left;
