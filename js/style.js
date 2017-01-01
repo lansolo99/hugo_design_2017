@@ -28,13 +28,16 @@ $(document)
       });
 
       var mobileGalleryHeight = parseInt((docWidth*2));
+      var desktopGalleryHeight = parseInt((docWidth/2));
+      // console.log('mobileGalleryHeight = ' + mobileGalleryHeight);
       var mobilefixedNavHeight = $("#fixedNav").height();
 
       //set
       $(".project .dark-dimmer").css("height",sectionHeight);
-      $(".photo-gallery.desktop.wrapper").css("height",docHeightDeskop);
+      // $(".photo-gallery.desktop.wrapper").css("height",docHeightDeskop);
+      $(".photo-gallery.desktop.wrapper").css("height",desktopGalleryHeight-60);
       $(".photo-gallery.mobile.wrapper").css("height",mobileGalleryHeight-mobilefixedNavHeight);
-    
+
     }
 
     checkSizeBrowser();

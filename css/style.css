@@ -85,12 +85,6 @@ h1 {
 .ui.menu .item {
   line-height: 0; }
 
-.ui.menu .item.no-mobile {
-  display: flex; }
-  @media only screen and (max-width: 767px) {
-    .ui.menu .item.no-mobile {
-      display: none; } }
-
 .ui.menu {
   font-family: "montserratlight", sans-serif;
   box-shadow: none;
@@ -119,6 +113,9 @@ h1 {
   height: 60px;
   /* Pages nav */
   /* Menu button */ }
+  @media only screen and (max-width: 767px) {
+    #fixedNav .ui.menu .item.no-mobile {
+      display: none; } }
   #fixedNav a.item:hover, #fixedNav .active.item {
     background-color: #333333; }
   #fixedNav .ui.menu {
@@ -179,7 +176,11 @@ h1 {
       @media only screen and (max-width: 767px) {
         #fixedNav .pages-nav .ui.menu .item {
           height: 16vw;
-          font-size: 4vw; } }
+          font-size: 4vw;
+          /* display:inline-block; */ } }
+      @media only screen and (max-width: 767px) {
+        #fixedNav .pages-nav .ui.menu .item.no-mobile {
+          display: none; } }
     @media only screen and (max-width: 767px) {
       #fixedNav .pages-nav {
         height: 16vw;

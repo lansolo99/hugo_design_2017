@@ -225,12 +225,7 @@ p{
   line-height: 0;
 }
 
-.ui.menu .item.no-mobile{
-  display: flex;
-  @include responsive(mobile){
-    display:none;
-  }
-}
+
 
 .ui.menu{
   font-family: $montserrat-light;
@@ -253,6 +248,14 @@ p{
 
 #fixedNav{
 
+  .ui.menu .item.no-mobile{
+
+    @include responsive(mobile){
+      display:none;
+    }
+  }
+
+
   a.item:hover, .active.item{
     background-color: $color-anthracite-light;
   }
@@ -264,6 +267,7 @@ p{
 
   @include responsive(mobile){
   height: 16vw;
+
   }
 
 
@@ -327,6 +331,14 @@ p{
       @include responsive (mobile){
           height: 16vw;
           font-size: 4vw;
+          /* display:inline-block; */
+
+      }
+
+      &.no-mobile{
+        @include responsive(mobile){
+          display:none;
+        }
       }
     }
 
